@@ -1,41 +1,67 @@
-# Unity generated folders
-[Ll]ibrary/
-[Tt]emp/
-[Oo]bj/
+# ========== Unity ==========
+
+# Build results
 [Bb]uild/
 [Bb]uilds/
+[Bb]in/
 [Ll]ogs/
-[Mm]emoryCaptures/
 
-# Unity auto-generated VS/JetBrains project files
-ExportedObj/
-.consulo/
-*.csproj
-*.unityproj
-*.sln
-*.suo
-*.tmp
+# User-specific files
 *.user
 *.userprefs
 *.pidb
 *.booproj
 *.svd
+*.suo
+*.tmp
+*.temp
+*.bak
+*.ncb
+*.opendb
+*.VC.db
 
-# Unity3D generated meta files
-*.pidb.meta
-*.pdb.meta
+# Unity generated files
+*.csproj
+*.unityproj
+*.sln
+*.sln.*
+*.tmproj
+*.pdb
 
-# Builds
-*.apk
-*.unitypackage
-
-# OS generated files
+# OS junk files
 .DS_Store
 Thumbs.db
+desktop.ini
 
-# Rider project files
+# VS Code
+.vscode/
+
+# Rider
 .idea/
 *.sln.iml
 
-# Crash and debug reports
-sysinfo.txt
+# Cache / temporary files
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Mm]emoryCaptures/
+[Uu]serSettings/
+
+# Do not ignore .meta files in Assets, ProjectSettings or Packages
+!Assets/**/*.meta
+!ProjectSettings/**/*.meta
+!Packages/**/*.meta
+
+# Ignore meta files in ignored folders
+[Ll]ibrary/**/*.meta
+[Tt]emp/**/*.meta
+[Oo]bj/**/*.meta
+[Bb]uild/**/*.meta
+[Bb]in/**/*.meta
+[Mm]emoryCaptures/**/*.meta
+
+# Auto-generated JetBrains Rider plugin
+Assets/Plugins/Editor/JetBrains*
+
+# Unity Collab
+.collabignore
