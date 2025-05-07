@@ -20,7 +20,6 @@ UserSettings/
 
 # Unity auto-generated meta files outside of Assets — allow only inside Assets
 !Assets/**/*.meta
-*.meta
 
 # Package manager
 Packages/packages-lock.json
