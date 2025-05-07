@@ -11,12 +11,17 @@ public class Player : MonoBehaviour
 
     public int key = 0;
 
+    public int life = 3;
+
     private Animator animator;
+
+    private BoxCollider2D colliderPlayer;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        colliderPlayer = GetComponent<BoxCollider2D>();
     }
 
     void Update()
@@ -25,6 +30,13 @@ public class Player : MonoBehaviour
         CheckFalling(); 
         Jump();
         Hit();
+        if(life <= 0)
+        {
+            this.enabled = false;
+            colliderPlayer.enabled = false;
+            rb.gravityScale = 0f;
+            animator.Play("Player_die", -1);
+        }
         
     }
 
@@ -119,6 +131,16 @@ public class Player : MonoBehaviour
         {
             key++;
             Destroy(other.gameObject);
+        }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        life -= damage;
+        if (life <= 0)
+        {
+            // Lógica para o jogador morrer
+            Destroy(gameObject);
         }
     }
 }
