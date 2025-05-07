@@ -1,4 +1,62 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+guid: f8517790b5bb2314a9dccaeaf3310efe
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5808494448098210720
+    second: EmojiOne_0
+  - first:
+      213: 5809591606527854514
+    second: EmojiOne_1
+  - first:
+      213: 7835686581805841452
+    second: EmojiOne_2
+  - first:
+      213: -2632011386569831178
+    second: EmojiOne_3
+  - first:
+      213: -820337123816873145
+    second: EmojiOne_4
+  - first:
+      213: -1693817957857621958
+    second: EmojiOne_5
+  - first:
+      213: 3410751109949786290
+    second: EmojiOne_6
+  - first:
+      213: -3799401067550073031
+    second: EmojiOne_7
+  - first:
+      213: -3115430251934431812
+    second: EmojiOne_8
+  - first:
+      213: 8812233978909280060
+    second: EmojiOne_9
+  - first:
+      213: 2364779998980427918
+    second: EmojiOne_10
+  - first:
+      213: 7512734304020417274
+    second: EmojiOne_11
+  - first:
+      213: -3895366958653414396
+    second: EmojiOne_12
+  - first:
+      213: -7174898199296445581
+    second: EmojiOne_13
+  - first:
+      213: 6820766471845492667
+    second: EmojiOne_14
+  - first:
+      213: 6857870083248498349
+    second: EmojiOne_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+=======
 guid: dffef66376be4fa480fb02b19edbe903
 TextureImporter:
   fileIDToRecycleName:
@@ -22,6 +80,7 @@ TextureImporter:
   mipmaps:
     mipMapMode: 0
     enableMipMap: 1
+>>>>>>> main
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -35,11 +94,29 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+<<<<<<< HEAD
+    flipGreenChannel: 0
   isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+=======
+  isReadable: 0
+>>>>>>> main
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
   seamlessCubemap: 0
+<<<<<<< HEAD
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+=======
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
@@ -47,6 +124,7 @@ TextureImporter:
     filterMode: -1
     aniso: -1
     mipBias: -1
+>>>>>>> main
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -58,6 +136,30 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+=======
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaUsage: 1
@@ -73,6 +175,7 @@ TextureImporter:
   - serializedVersion: 2
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 512
+>>>>>>> main
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -80,10 +183,19 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+<<<<<<< HEAD
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+=======
     androidETC2FallbackOverride: 0
   - serializedVersion: 2
     buildTarget: Standalone
     maxTextureSize: 512
+>>>>>>> main
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -91,6 +203,14 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+<<<<<<< HEAD
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+=======
     androidETC2FallbackOverride: 0
   - serializedVersion: 2
     buildTarget: iPhone
@@ -106,6 +226,7 @@ TextureImporter:
   - serializedVersion: 2
     buildTarget: Android
     maxTextureSize: 512
+>>>>>>> main
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -113,7 +234,13 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+<<<<<<< HEAD
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+=======
+    androidETC2FallbackOverride: 0
+>>>>>>> main
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -121,6 +248,22 @@ TextureImporter:
       name: EmojiOne_0
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
+        x: 3
+        y: 387
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06c074df215146fa0800000000000000
+      internalID: -5808494448098210720
+=======
         x: 0
         y: 384
         width: 128
@@ -133,6 +276,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 4bcc36da2108f2c4ba3de5c921d25c3c
+>>>>>>> main
       vertices: []
       indices: 
       edges: []
@@ -141,6 +285,22 @@ TextureImporter:
       name: EmojiOne_1
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
+        x: 131
+        y: 387
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b70f2d19c0df9050800000000000000
+      internalID: 5809591606527854514
+=======
         x: 128
         y: 384
         width: 128
@@ -153,6 +313,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: e9eea8093eaeaee4d901c4553f572c22
+>>>>>>> main
       vertices: []
       indices: 
       edges: []
@@ -161,6 +322,22 @@ TextureImporter:
       name: EmojiOne_2
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
+        x: 259
+        y: 387
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2cf4df4e63fdbc60800000000000000
+      internalID: 7835686581805841452
+=======
         x: 256
         y: 384
         width: 128
@@ -173,6 +350,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 49451da35411dcc42a3692e39b0fde70
+>>>>>>> main
       vertices: []
       indices: 
       edges: []
@@ -181,6 +359,22 @@ TextureImporter:
       name: EmojiOne_3
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
+        x: 387
+        y: 387
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fcc8b2c697397bd0800000000000000
+      internalID: -2632011386569831178
+=======
         x: 384
         y: 384
         width: 128
@@ -193,6 +387,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: f65709664b924904790c850a50ca82bc
+>>>>>>> main
       vertices: []
       indices: 
       edges: []
@@ -201,6 +396,44 @@ TextureImporter:
       name: EmojiOne_4
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
+        x: 3
+        y: 259
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74364d27bb39d94f0800000000000000
+      internalID: -820337123816873145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojiOne_5
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 259
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3808b3aa895e78e0800000000000000
+      internalID: -1693817957857621958
+=======
         x: 0
         y: 256
         width: 128
@@ -213,6 +446,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 5b92c568a5ec9ad4b9ed90e271f1c9a8
+>>>>>>> main
       vertices: []
       indices: 
       edges: []
@@ -221,6 +455,22 @@ TextureImporter:
       name: EmojiOne_6
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
+        x: 259
+        y: 259
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b883d5401c655f20800000000000000
+      internalID: 3410751109949786290
+=======
         x: 256
         y: 256
         width: 128
@@ -233,6 +483,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: b10f2b48b7281594bb8a24a6511a35af
+>>>>>>> main
       vertices: []
       indices: 
       edges: []
@@ -241,6 +492,22 @@ TextureImporter:
       name: EmojiOne_7
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
+        x: 387
+        y: 259
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93f1071fbd0d54bc0800000000000000
+      internalID: -3799401067550073031
+=======
         x: 384
         y: 256
         width: 128
@@ -253,6 +520,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 10a600f9329dc2246a897e89f4d283cd
+>>>>>>> main
       vertices: []
       indices: 
       edges: []
@@ -261,6 +529,22 @@ TextureImporter:
       name: EmojiOne_8
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
+        x: 3
+        y: 131
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb541fe21b4c3c4d0800000000000000
+      internalID: -3115430251934431812
+=======
         x: 0
         y: 128
         width: 128
@@ -273,6 +557,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 66cffa363b90ab14787d8a5b90cf4502
+>>>>>>> main
       vertices: []
       indices: 
       edges: []
@@ -281,6 +566,22 @@ TextureImporter:
       name: EmojiOne_9
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
+        x: 131
+        y: 131
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c37c3865d185b4a70800000000000000
+      internalID: 8812233978909280060
+=======
         x: 128
         y: 128
         width: 128
@@ -293,6 +594,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 55cf3d409c9b89349b1e1bdc1cc224ad
+>>>>>>> main
       vertices: []
       indices: 
       edges: []
@@ -301,6 +603,22 @@ TextureImporter:
       name: EmojiOne_10
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
+        x: 259
+        y: 131
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e805d2341e261d020800000000000000
+      internalID: 2364779998980427918
+=======
         x: 256
         y: 128
         width: 128
@@ -313,6 +631,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 2a9e58eaf96feef42bcefa1cf257193f
+>>>>>>> main
       vertices: []
       indices: 
       edges: []
@@ -321,6 +640,22 @@ TextureImporter:
       name: EmojiOne_11
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
+        x: 387
+        y: 131
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afa470b9b08924860800000000000000
+      internalID: 7512734304020417274
+=======
         x: 384
         y: 128
         width: 128
@@ -333,6 +668,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 2489120affc155840ae6a7be2e93ce19
+>>>>>>> main
       vertices: []
       indices: 
       edges: []
@@ -341,6 +677,22 @@ TextureImporter:
       name: EmojiOne_12
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
+        x: 3
+        y: 3
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4046bafb360e0f9c0800000000000000
+      internalID: -3895366958653414396
+=======
         x: 0
         y: 0
         width: 128
@@ -353,6 +705,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 412349a150598d14da4d7140df5c0286
+>>>>>>> main
       vertices: []
       indices: 
       edges: []
@@ -361,6 +714,22 @@ TextureImporter:
       name: EmojiOne_13
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
+        x: 131
+        y: 3
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 373785b1a14ad6c90800000000000000
+      internalID: -7174898199296445581
+=======
         x: 128
         y: 0
         width: 128
@@ -393,6 +762,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: b0f933b217682124dbfc5e6b89abe3d0
+>>>>>>> main
       vertices: []
       indices: 
       edges: []
@@ -401,6 +771,44 @@ TextureImporter:
       name: EmojiOne_14
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
+        x: 259
+        y: 3
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb7be3ad7fa38ae50800000000000000
+      internalID: 6820766471845492667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EmojiOne_15
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 3
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da62ec3918c0c2f50800000000000000
+      internalID: 6857870083248498349
+=======
         x: 128
         y: 256
         width: 128
@@ -413,19 +821,37 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: f7235c763afe4434e8bb666750a41096
+>>>>>>> main
       vertices: []
       indices: 
       edges: []
       weights: []
     outline: []
+<<<<<<< HEAD
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+=======
     physicsShape: []
     bones: []
     spriteID: 3e32d8f5477abfc43b19066e8ad5032e
+>>>>>>> main
     vertices: []
     indices: 
     edges: []
     weights: []
+<<<<<<< HEAD
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+=======
   spritePackingTag: 
+>>>>>>> main
   userData: 
   assetBundleName: 
   assetBundleVariant: 
