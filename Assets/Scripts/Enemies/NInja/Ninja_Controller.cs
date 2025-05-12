@@ -22,6 +22,13 @@ public class Ninja_Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(life <= 0)
+        {
+            this.enabled = false;
+            colliderNinja.enabled = false;
+            anim.Play("Ninja_Dying", -1);
+            return;
+        }
         if(anim.GetCurrentAnimatorStateInfo(0).IsName("Ninja_attack"))
         {
             return;

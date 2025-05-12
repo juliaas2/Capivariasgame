@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
 
     public int key = 0;
 
-    public int life = 3;
+    public int life = 8;
 
     private Animator animator;
 
