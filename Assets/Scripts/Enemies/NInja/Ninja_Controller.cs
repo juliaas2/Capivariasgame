@@ -11,13 +11,22 @@ public class Ninja_Controller : MonoBehaviour
 
     public Transform a;
     public Transform b;
+    public GameObject range;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        colliderNinja = GetComponent<CapsuleCollider2D>();
-        anim = GetComponent<Animator>();
-    }
+void Start()
+{
+    colliderNinja = GetComponent<CapsuleCollider2D>();
+    anim = GetComponent<Animator>();
+    
+    if (range == null)
+        range = transform.Find("Range")?.gameObject;
+
+    Rigidbody2D rb = GetComponent<Rigidbody2D>();
+    if (rb != null)
+        rb.gravityScale = 0;
+}
+
 
     // Update is called once per frame
     void Update()
@@ -26,7 +35,8 @@ public class Ninja_Controller : MonoBehaviour
         {
             this.enabled = false;
             colliderNinja.enabled = false;
-            anim.Play("Ninja_Dying", -1);
+            range.SetActive(false);
+            anim.Play("NInja_Dying", -1);
             return;
         }
         if(anim.GetCurrentAnimatorStateInfo(0).IsName("Ninja_attack"))

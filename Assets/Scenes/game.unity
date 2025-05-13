@@ -3365,8 +3365,9 @@ GameObject:
   - component: {fileID: 1401794472}
   - component: {fileID: 1401794475}
   - component: {fileID: 1401794476}
+  - component: {fileID: 1401794477}
   m_Layer: 0
-  m_Name: Chest1_0
+  m_Name: Bau
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3510,6 +3511,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1401794477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401794471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e19b989306613a44a6ff2e6a06c6489, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1423581208
 GameObject:
   m_ObjectHideFlags: 0
@@ -4576,6 +4589,7 @@ MonoBehaviour:
   speed: 5
   a: {fileID: 1130801527}
   b: {fileID: 809034884}
+  range: {fileID: 0}
 --- !u!95 &2073272721
 Animator:
   serializedVersion: 7

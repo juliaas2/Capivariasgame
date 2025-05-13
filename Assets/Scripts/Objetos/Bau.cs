@@ -10,6 +10,7 @@ public class Bau : MonoBehaviour
             {
                 collision.GetComponent<Player>().key -= 1;
                 GetComponent<Animator>().SetTrigger("Open");
+
             }
         }
     }
