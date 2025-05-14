@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {   
+    private AudioSource audioSource;
+    public AudioClip keySound;
     public float Speed;
     private Rigidbody2D rb;
     public float JumpForce;
@@ -22,6 +24,7 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         colliderPlayer = GetComponent<BoxCollider2D>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -130,6 +133,7 @@ public class Player : MonoBehaviour
         if (other.CompareTag("Key"))
         {
             key++;
+            audioSource.PlayOneShot(keySound);
             Destroy(other.gameObject);
         }
     }
