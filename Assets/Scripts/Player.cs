@@ -1,5 +1,6 @@
 using UnityEngine;
 
+
 public class Player : MonoBehaviour
 {   
     private AudioSource audioSource;
@@ -130,13 +131,14 @@ public class Player : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Key"))
+    if (other.CompareTag("Key"))
         {
             key++;
-            audioSource.PlayOneShot(keySound);
-            Destroy(other.gameObject);
+            Destroy(other.gameObject, 0.5f); // Adicione um pequeno atraso para o som tocar antes de destruir
+            other.GetComponent<AudioSource>().Play();
         }
     }
+
 
     public void TakeDamage(int damage)
     {

@@ -258,6 +258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae8591b8af1a3d4fb6ccbf508e21f85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keySound: {fileID: 8300000, guid: 98cc36b74a606473a9fedb7c13b39a91, type: 3}
   Speed: 5
   JumpForce: 15
   isJumping: 0
