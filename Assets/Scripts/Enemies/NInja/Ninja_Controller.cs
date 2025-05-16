@@ -7,7 +7,7 @@ public class Ninja_Controller : MonoBehaviour
     private Animator anim;
     private bool goRight;
 
-    public int life;
+    public float life;
     public float speed;
 
     public Transform a;

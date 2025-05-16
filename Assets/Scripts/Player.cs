@@ -31,7 +31,6 @@ public class Player : MonoBehaviour
     void Update()
     {
         Move();
-        CheckFalling(); 
         Jump();
         Hit();
         if(life <= 0)
@@ -74,7 +73,6 @@ public class Player : MonoBehaviour
                 rb.AddForce(new Vector2(0f, JumpForce), ForceMode2D.Impulse);
                 isJumping = true;
                 animator.SetBool("jump", true);
-                animator.SetBool("falling", false);
             }
             else
             {
@@ -87,19 +85,6 @@ public class Player : MonoBehaviour
         }
     }
 
-    void CheckFalling()
-    {
-        // Detecta queda (está no ar e descendo)
-        if (rb.linearVelocity.y < -0.1f && isJumping)
-        {
-            animator.SetBool("falling", true);
-            animator.SetBool("jump", false);
-        }
-        else if (rb.linearVelocity.y >= -0.1f && isJumping)
-        {
-            animator.SetBool("falling", false);
-        }
-    }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -108,7 +93,6 @@ public class Player : MonoBehaviour
             isJumping = false;
             doubleJump = false;
             animator.SetBool("jump", false);
-            animator.SetBool("falling", false);
         }
     }
 

@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   choiceCanvas: {fileID: 0}
-  audioCutTime: 3
+  audioCutTime: 2
 --- !u!82 &1100524058981327007
 AudioSource:
   m_ObjectHideFlags: 0
