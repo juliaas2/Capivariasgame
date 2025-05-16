@@ -20,6 +20,9 @@ public class Player : MonoBehaviour
 
     private BoxCollider2D colliderPlayer;
 
+
+    public CircleCollider2D attackCollider;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -111,6 +114,16 @@ public class Player : MonoBehaviour
             animator.SetTrigger("hit");
         }
     
+    }
+
+    public void DisableAttackCollider()
+    {
+        attackCollider.enabled = false;
+    }
+
+    public void AbleAttackCollider()
+    {
+        attackCollider.enabled = true;
     }
 
     void OnTriggerEnter2D(Collider2D other)
