@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {   
+    public GameObject gameOverCanvas;
     private AudioSource audioSource;
     public AudioClip keySound;
     public float Speed;
@@ -139,11 +140,14 @@ public class Player : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        Debug.Log("Player tomou dano: " + damage);
         life -= damage;
         if (life <= 0)
         {
-            // Lógica para o jogador morrer
+            Debug.Log("Player morreu");
+            gameOverCanvas.SetActive(true);
             Destroy(gameObject);
+            // Lógica para o jogador morrer
         }
     }
 }

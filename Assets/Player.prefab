@@ -81,6 +81,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9062b3ab456de65459751c03d0e36205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attack: 0
 --- !u!1 &7465501914985225229
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,6 +259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae8591b8af1a3d4fb6ccbf508e21f85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOverCanvas: {fileID: 0}
   keySound: {fileID: 8300000, guid: 98cc36b74a606473a9fedb7c13b39a91, type: 3}
   Speed: 5
   JumpForce: 15
@@ -265,6 +267,7 @@ MonoBehaviour:
   doubleJump: 0
   key: 0
   life: 3
+  attackCollider: {fileID: 7995012777014780587}
 --- !u!95 &4963534452220228311
 Animator:
   serializedVersion: 7

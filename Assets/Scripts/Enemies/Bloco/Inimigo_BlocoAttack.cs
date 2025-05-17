@@ -7,7 +7,7 @@ public class Inimigo_BlocoAttack : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            other.GetComponent<Player>().life -= damage;
+            other.GetComponent<Player>().TakeDamage(damage);
         }
     }
 }
