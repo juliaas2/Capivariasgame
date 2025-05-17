@@ -7,6 +7,7 @@ TagManager:
   - Key
   - Enemy
   - Ninja
+  - Boss
   layers:
   - Default
   - TransparentFX
