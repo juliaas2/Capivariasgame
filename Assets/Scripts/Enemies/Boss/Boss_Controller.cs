@@ -1,22 +1,21 @@
 using UnityEngine;
-using System.Collections;
+using System.Collections; // Necessário para usar IEnumerator
 
 public class Boss_Controller : MonoBehaviour
 {
-    private CapsuleCollider2D colliderboss;
+    private CapsuleCollider2D colliderBoss;
     private Animator animator;
     private string side;
     public float speed;
     public int life;
     public Transform player;
 
-    public GameObject range;
-
     void Start()
     {
-        colliderboss = GetComponent<CapsuleCollider2D>();
+        colliderBoss = GetComponent<CapsuleCollider2D>();
         animator = GetComponent<Animator>();
 
+        // Se não foi atribuído manualmente, tenta encontrar o jogador pela tag
         if (player == null)
         {
             GameObject playerObj = GameObject.FindWithTag("Player");
@@ -36,24 +35,12 @@ public class Boss_Controller : MonoBehaviour
         if (life <= 0)
         {
             this.enabled = false;
-            colliderboss.enabled = false;
-
-            if (range != null)
-                range.SetActive(false);
-    
-            animator.Play("boss_die");
-            StartCoroutine(RemoveNinja());
+            colliderBoss.enabled = false;
+            animator.Play("boss_die", -1); // Certifique-se de que essa animação existe
+            StartCoroutine(RemoveBoss());
             return;
         }
 
-        if (player != null)
-        {
-            MoveTowardsPlayer();
-        }
-    }
-
-    private void MoveTowardsPlayer()
-    {
         if (player == null) return;
 
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("boss_attack"))
@@ -74,7 +61,7 @@ public class Boss_Controller : MonoBehaviour
                 transform.eulerAngles = new Vector3(0f, 180f, 0f);
                 break;
             case "left":
-                transform.eulerAngles = new Vector3(0f, 0f, 0f);
+                transform.eulerAngles = new Vector3(0f, 0f , 0f);
                 break;
         }
 
@@ -88,9 +75,9 @@ public class Boss_Controller : MonoBehaviour
         }
     }
 
-    private IEnumerator RemoveNinja()
+    private IEnumerator RemoveBoss()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1f); // tempo para a animação de morte acontecer
         Destroy(gameObject);
     }
 }

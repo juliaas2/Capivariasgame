@@ -8,12 +8,11 @@ public class Boss_Kitten : MonoBehaviour
     {
         if (other.CompareTag("Player") && boss != null)
         {
-            var bossController = boss.GetComponent<Boss_Controller>();
-            if (bossController != null)
-            {
-                bossController.enabled = true;
-                boss.GetComponent<Animator>().SetBool("is_run", true);
-            }
+            var controller = boss.GetComponent<Boss_Controller>();
+            var animator = boss.GetComponent<Animator>();
+
+            if (controller != null) controller.enabled = true;
+            if (animator != null) animator.SetBool("is_run", true); // começa a correr
         }
     }
 
@@ -21,12 +20,11 @@ public class Boss_Kitten : MonoBehaviour
     {
         if (other.CompareTag("Player") && boss != null)
         {
-            var bossController = boss.GetComponent<Boss_Controller>();
-            if (bossController != null)
-            {
-                bossController.enabled = false;
-                boss.GetComponent<Animator>().SetBool("is_run", true);
-            }
+            var controller = boss.GetComponent<Boss_Controller>();
+            var animator = boss.GetComponent<Animator>();
+
+            if (controller != null) controller.enabled = false;
+            if (animator != null) animator.SetBool("is_run", false); // para de correr
         }
     }
 }
