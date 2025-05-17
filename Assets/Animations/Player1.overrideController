@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Player1
+  m_Controller: {fileID: 9100000, guid: 9ebc62affea74d54b917edd66e5b271e, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 3faa3e378767fd647a590cb990e1bd00, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 3faa3e378767fd647a590cb990e1bd00, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 222dbc56aaeab91418b83b961c51951b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 222dbc56aaeab91418b83b961c51951b, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 379e05ec760a52a48a77ef338ac94654, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 379e05ec760a52a48a77ef338ac94654, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 191a23af46ddf5043b57f6c1516f6480, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 191a23af46ddf5043b57f6c1516f6480, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: bcedfaf7ba7fc1a42a7fa4e5356b7ac6, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: bcedfaf7ba7fc1a42a7fa4e5356b7ac6, type: 2}

@@ -203,7 +203,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1833221440}
         m_TargetAssemblyTypeName: ChangePlayer, Assembly-CSharp
-        m_MethodName: ChangeImage
+        m_MethodName: Skin2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1694,7 +1694,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1833221440}
         m_TargetAssemblyTypeName: ChangePlayer, Assembly-CSharp
-        m_MethodName: ChangeImage
+        m_MethodName: Skin1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2628,6 +2628,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d63107a45c9f44743abaf82f8110dc7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player2: {fileID: 22100000, guid: 282559e9947834ba9ba1d63c54e47607, type: 2}
+  player1: {fileID: 22100000, guid: 4bd85d21fb84348cc914cfdffcb3b077, type: 2}
+  player: {fileID: 7465501914985225229, guid: e0eca03ef50628542a7d48eb8541bddf, type: 3}
   playerImage: {fileID: 288330165}
   newPlayerSprite: {fileID: -1993386855557275526, guid: f76e83fc29267e8489550104eb528025, type: 3}
 --- !u!1 &1868398434

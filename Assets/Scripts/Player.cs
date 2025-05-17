@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {   
+    public GameObject gameOverCanvas;
     private AudioSource audioSource;
     public AudioClip keySound;
     public float Speed;
@@ -20,6 +21,9 @@ public class Player : MonoBehaviour
 
     private BoxCollider2D colliderPlayer;
 
+
+    public CircleCollider2D attackCollider;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -31,7 +35,6 @@ public class Player : MonoBehaviour
     void Update()
     {
         Move();
-        CheckFalling(); 
         Jump();
         Hit();
         if(life <= 0)
@@ -74,7 +77,6 @@ public class Player : MonoBehaviour
                 rb.AddForce(new Vector2(0f, JumpForce), ForceMode2D.Impulse);
                 isJumping = true;
                 animator.SetBool("jump", true);
-                animator.SetBool("falling", false);
             }
             else
             {
@@ -87,19 +89,6 @@ public class Player : MonoBehaviour
         }
     }
 
-    void CheckFalling()
-    {
-        // Detecta queda (está no ar e descendo)
-        if (rb.linearVelocity.y < -0.1f && isJumping)
-        {
-            animator.SetBool("falling", true);
-            animator.SetBool("jump", false);
-        }
-        else if (rb.linearVelocity.y >= -0.1f && isJumping)
-        {
-            animator.SetBool("falling", false);
-        }
-    }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -108,7 +97,6 @@ public class Player : MonoBehaviour
             isJumping = false;
             doubleJump = false;
             animator.SetBool("jump", false);
-            animator.SetBool("falling", false);
         }
     }
 
@@ -129,6 +117,16 @@ public class Player : MonoBehaviour
     
     }
 
+    public void DisableAttackCollider()
+    {
+        attackCollider.enabled = false;
+    }
+
+    public void AbleAttackCollider()
+    {
+        attackCollider.enabled = true;
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
     if (other.CompareTag("Key"))
@@ -142,11 +140,14 @@ public class Player : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        Debug.Log("Player tomou dano: " + damage);
         life -= damage;
         if (life <= 0)
         {
-            // Lógica para o jogador morrer
+            Debug.Log("Player morreu");
+            gameOverCanvas.SetActive(true);
             Destroy(gameObject);
+            // Lógica para o jogador morrer
         }
     }
 }
