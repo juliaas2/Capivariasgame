@@ -1,6 +1,6 @@
-# ​CAPIVÁRIAS: The Adventure
+​CAPIVÁRIAS: The Adventure
 
-# CIÊNCIA DA COMPUTAÇÃO
+CIÊNCIA DA COMPUTAÇÃO
 
 Jonas Bonfá Pelegrina
 Giulia Gomes Valente
@@ -8,17 +8,21 @@ Julia Almeida Silva
 Laura Pontirolli
 ​​Blueprint
 
-​
+​Em uma floresta mágica onde o tempo parece fluir ao ritmo das árvores, vive Capí, uma jovem capivara destemida que mora com sua querida avó. Mas a tranquilidade do vilarejo é quebrada quando misteriosos sequestradores invadem sua casa e levam sua avó sem deixar pistas.
 
-# Como jogar
+Com os moradores paralisados pelo medo e as trilhas da floresta cobertas por perigos e segredos antigos, Capí decide embarcar sozinha em uma jornada épica.
 
-​Para movimentar o player utilize as teclas A W D.
+Explore a Floresta Encantada, enfrente criaturas místicas e descubra o verdadeiro poder da coragem em um mundo onde até uma capivara pode ser heroína.
 
-Para atacar utilize a tecla espaço
+Como jogar
 
+O jogador utilizará WASD ou setas direcionais para se movimentar, sendo A e D para andar para frente e para trás e W para pular. Para atacar, deve utilizar Espaço.​
 
-
-# Créditos
+Créditos
 
 Assets: Craft Pix
 Audios: Pixabay
+Tutoriais de unity + Chatgpt
+Repositório
+
+https://github.com/juliaas2/Capivariasgame​​
