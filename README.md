@@ -1,6 +1,7 @@
-​CAPIVÁRIAS: The Adventure
+​
+# CAPIVÁRIAS: The Adventure
 
-CIÊNCIA DA COMPUTAÇÃO
+# CIÊNCIA DA COMPUTAÇÃO
 
 Jonas Bonfá Pelegrina
 Giulia Gomes Valente
@@ -14,15 +15,24 @@ Com os moradores paralisados pelo medo e as trilhas da floresta cobertas por per
 
 Explore a Floresta Encantada, enfrente criaturas místicas e descubra o verdadeiro poder da coragem em um mundo onde até uma capivara pode ser heroína.
 
-Como jogar
+# Como jogar
 
-O jogador utilizará WASD ou setas direcionais para se movimentar, sendo A e D para andar para frente e para trás e W para pular. Para atacar, deve utilizar Espaço.​
+O jogador utilizará WASD ou setas direcionais para se movimentar, sendo A e D para andar para frente e para trás e W para pular. Para atacar, deve utilizar Espaço.
 
-Créditos
+Keys: O personagem principal coleta chaves ao longo do caminho por meio de colisão.
+
+Chest: O personagem principal consegue abrir um baú se tiver coletado uma chave.
+
+Reinforcement:  Ao abrir um baú, o personagem receberá um reforço, podendo ser de força ou de vida.
+
+# Créditos
 
 Assets: Craft Pix
+
 Audios: Pixabay
+
 Tutoriais de unity + Chatgpt
+
 Repositório
 
 https://github.com/juliaas2/Capivariasgame​​
