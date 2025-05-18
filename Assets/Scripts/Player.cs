@@ -136,7 +136,7 @@ public class Player : MonoBehaviour
 
     
 
-    public void TakeDamage(int damage)
+public void TakeDamage(int damage)
 {
     Debug.Log("Player took damage: " + damage);
     life -= damage;
@@ -148,6 +148,7 @@ public class Player : MonoBehaviour
         animator.Play("Player_die", -1);   
         rb.gravityScale = 0f;  
         StartCoroutine(WaitForDeathAnimation());
+
     }
 }
 
