@@ -51,6 +51,6 @@ public class GameOver : MonoBehaviour
             yield return new WaitForSeconds(gameOverSound.length);
         }
 
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 }

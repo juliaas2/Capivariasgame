@@ -5,6 +5,6 @@ public class Reiniciar : MonoBehaviour
     public void Menu()
    {
        // Carrega a cena do menu
-       UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+       UnityEngine.SceneManagement.SceneManager.LoadScene(0);
    }
 }

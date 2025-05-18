@@ -10,6 +10,6 @@ public class jogar_redirecionar : MonoBehaviour
         data.life = 3; // Define a vida inicial
         data.keys = 0; // Define as moedas iniciais
         // Carrega a cena "Jogo"
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
     }
 }
