@@ -7,7 +7,10 @@ public class Inimigo_BlocoQueCai : MonoBehaviour
     [SerializeField] private float gravidade;
     [SerializeField] private float velocidadeDeSubida;
     [SerializeField] private float tempoMaximoParaSubir;
-    [SerializeField] private float tempoNoTopo; // novo: quanto tempo ele espera no topo
+    [SerializeField] private float tempoNoTopo;
+
+    [SerializeField] private AudioClip somImpacto; // som da batida
+    private AudioSource audioSource;
 
     private float tempoAtualParaSubir;
     private float tempoAtualNoTopo;
@@ -20,6 +23,9 @@ public class Inimigo_BlocoQueCai : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+            audioSource = gameObject.AddComponent<AudioSource>();
     }
 
     void Start()
@@ -62,17 +68,17 @@ public class Inimigo_BlocoQueCai : MonoBehaviour
             else
             {
                 esperandoNoTopo = true;
-                tempoAtualNoTopo = tempoNoTopo; // reinicia o tempo no topo
+                tempoAtualNoTopo = tempoNoTopo;
             }
         }
-        else // esperando no topo
+        else
         {
             tempoAtualNoTopo -= Time.deltaTime;
             if (tempoAtualNoTopo <= 0f)
             {
                 esperandoNoTopo = false;
                 podeCair = true;
-                AtivarGravidade(); // cai de novo depois de esperar no topo
+                AtivarGravidade();
             }
         }
     }
@@ -83,6 +89,21 @@ public class Inimigo_BlocoQueCai : MonoBehaviour
         {
             caiu = true;
             rb.gravityScale = gravidade;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (caiu)
+        {
+            string nome = collision.collider.name;
+            if (nome == "Jungle_tile_11_0 (13)" || nome == "Jungle_tile_11_0 (18)")
+            {
+                if (somImpacto != null)
+                {
+                    audioSource.PlayOneShot(somImpacto);
+                }
+            }
         }
     }
 }
