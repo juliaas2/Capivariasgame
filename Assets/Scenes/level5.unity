@@ -2644,6 +2644,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3451472873176078418, guid: 6d5a3179d86e07a44a31e3ce7bf81e65, type: 3}
+      propertyPath: choiceCanvas
+      value: 
+      objectReference: {fileID: 2038645180}
     - target: {fileID: 4705957195189002603, guid: 6d5a3179d86e07a44a31e3ce7bf81e65, type: 3}
       propertyPath: m_Name
       value: Bau
@@ -4131,6 +4135,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4259519590052090218, guid: 0466725faa4e24fa098ad83b7874338f, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 730017136}
+    - target: {fileID: 4259519590052090218, guid: 0466725faa4e24fa098ad83b7874338f, type: 3}
+      propertyPath: choiceCanvas
+      value: 
+      objectReference: {fileID: 2038645180}
+    - target: {fileID: 4259519590052090218, guid: 0466725faa4e24fa098ad83b7874338f, type: 3}
+      propertyPath: playerAttack
+      value: 
+      objectReference: {fileID: 349235295}
     - target: {fileID: 4637893673867690145, guid: 0466725faa4e24fa098ad83b7874338f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
