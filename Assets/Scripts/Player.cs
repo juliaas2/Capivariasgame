@@ -32,6 +32,18 @@ public class Player : MonoBehaviour
         animator = GetComponent<Animator>();
         colliderPlayer = GetComponent<BoxCollider2D>();
         audioSource = GetComponent<AudioSource>();
+
+        var data = GameManager.instance.playerData;
+        life = data.life;  
+        key = data.keys;
+
+    }
+    
+    private void OnDisable()
+    {
+        var data = GameManager.instance.playerData;
+        data.life = life;
+        data.keys = key;
     }
 
     void Update()
@@ -39,7 +51,6 @@ public class Player : MonoBehaviour
         Move();
         Jump();
         Hit();
-    
         
     }
 
@@ -134,28 +145,21 @@ public class Player : MonoBehaviour
         }
     }
 
-    
 
-public void TakeDamage(int damage)
-{
-    Debug.Log("Player took damage: " + damage);
-    life -= damage;
-    if (life <= 0)
+    public void TakeDamage(int damage)
     {
-        this.enabled = false;
-        colliderPlayer.enabled = false;
-        musicPlayer.StopMusic();
-        animator.Play("Player_die", -1);   
-        rb.gravityScale = 0f;  
-        StartCoroutine(WaitForDeathAnimation());
-
+       Debug.Log("Player took damage: " + damage);
+        life -= damage;
+        if (life <= 0)
+        {
+            this.enabled = false;
+            colliderPlayer.enabled = false;
+            rb.gravityScale = 0f;
+            animator.Play("Player_die", -1);
+            musicPlayer.StopMusic();
+            gameOverCanvas.SetActive(true);
+            Destroy(gameObject);
+            // Lógica para o jogador morrer
+        }
     }
-}
-
-private System.Collections.IEnumerator WaitForDeathAnimation()
-{
-    // Espera até que a animação de morte termine
-    yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
-    gameOverCanvas.SetActive(true);
-}
 }
