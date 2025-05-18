@@ -201,9 +201,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1833221440}
-        m_TargetAssemblyTypeName: ChangePlayer, Assembly-CSharp
-        m_MethodName: Skin2
+      - m_Target: {fileID: 1833221441}
+        m_TargetAssemblyTypeName: SkinSelector, Assembly-CSharp
+        m_MethodName: SelectAlternativeSkin
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1692,9 +1692,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1833221440}
-        m_TargetAssemblyTypeName: ChangePlayer, Assembly-CSharp
-        m_MethodName: Skin1
+      - m_Target: {fileID: 1833221441}
+        m_TargetAssemblyTypeName: SkinSelector, Assembly-CSharp
+        m_MethodName: SelectDefaultSkin
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1754,6 +1754,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1123260636}
   m_CullTransparentMesh: 1
+--- !u!1 &1320267535
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1320267537}
+  - component: {fileID: 1320267536}
+  m_Layer: 0
+  m_Name: SkinManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1320267536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320267535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05df700ee0d5445b8914b6e59ecc05e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultSkinController: {fileID: 22100000, guid: 4bd85d21fb84348cc914cfdffcb3b077, type: 2}
+  alternativeSkinController: {fileID: 22100000, guid: 282559e9947834ba9ba1d63c54e47607, type: 2}
+  defaultSkinSprite: {fileID: -4933466471510027999, guid: 1cda8e9569a0da14c88dfcb662777d75, type: 3}
+  alternativeSkinSprite: {fileID: -1993386855557275526, guid: f76e83fc29267e8489550104eb528025, type: 3}
+  menuSceneIndex: 1
+--- !u!4 &1320267537
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320267535}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 566.56354, y: 281.5925, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1406075536
 GameObject:
   m_ObjectHideFlags: 0
@@ -2496,6 +2545,7 @@ GameObject:
   - component: {fileID: 1833221439}
   - component: {fileID: 1833221438}
   - component: {fileID: 1833221437}
+  - component: {fileID: 1833221441}
   - component: {fileID: 1833221436}
   - component: {fileID: 1833221435}
   - component: {fileID: 1833221440}
@@ -2634,6 +2684,20 @@ MonoBehaviour:
   player: {fileID: 7465501914985225229, guid: e0eca03ef50628542a7d48eb8541bddf, type: 3}
   playerImage: {fileID: 288330165}
   newPlayerSprite: {fileID: -1993386855557275526, guid: f76e83fc29267e8489550104eb528025, type: 3}
+  tempSprite: {fileID: 0}
+--- !u!114 &1833221441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833221434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8e24e426d62a411892f58542e31a8b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previewImage: {fileID: 288330165}
 --- !u!1 &1868398434
 GameObject:
   m_ObjectHideFlags: 0
@@ -3191,3 +3255,4 @@ SceneRoots:
   - {fileID: 1833221439}
   - {fileID: 1058368911}
   - {fileID: 1406075539}
+  - {fileID: 1320267537}

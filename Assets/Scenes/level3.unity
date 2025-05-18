@@ -4258,6 +4258,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6155028155155427918, guid: e0eca03ef50628542a7d48eb8541bddf, type: 3}
+      propertyPath: musicPlayer
+      value: 
+      objectReference: {fileID: 1599210526}
+    - target: {fileID: 6155028155155427918, guid: e0eca03ef50628542a7d48eb8541bddf, type: 3}
       propertyPath: gameOverCanvas
       value: 
       objectReference: {fileID: 954059374}
@@ -4892,6 +4896,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf28076aa02554a34a3412729915f9c1, type: 3}
+--- !u!114 &1599210526 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 652170594463954704, guid: cf28076aa02554a34a3412729915f9c1, type: 3}
+  m_PrefabInstance: {fileID: 1599210525}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe4ab8e3fc4944e91a4f504fe91c2b9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1613071309
 GameObject:
   m_ObjectHideFlags: 0

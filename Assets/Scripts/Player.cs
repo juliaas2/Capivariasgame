@@ -39,13 +39,7 @@ public class Player : MonoBehaviour
         Move();
         Jump();
         Hit();
-        if(life <= 0)
-        {
-            this.enabled = false;
-            colliderPlayer.enabled = false;
-            rb.gravityScale = 0f;
-            animator.Play("Player_die", -1);
-        }
+    
         
     }
 
@@ -140,18 +134,27 @@ public class Player : MonoBehaviour
         }
     }
 
+    
 
     public void TakeDamage(int damage)
+{
+    Debug.Log("Player took damage: " + damage);
+    life -= damage;
+    if (life <= 0)
     {
-       Debug.Log("Player took damage: " + damage);
-        life -= damage;
-        if (life <= 0)
-        {
-            
-            musicPlayer.StopMusic();
-            gameOverCanvdas.SetActive(true);
-            Destroy(gameObject);
-            // Lógica para o jogador morrer
-        }
+        this.enabled = false;
+        colliderPlayer.enabled = false;
+        musicPlayer.StopMusic();
+        animator.Play("Player_die", -1);   
+        rb.gravityScale = 0f;  
+        StartCoroutine(WaitForDeathAnimation());
     }
+}
+
+private System.Collections.IEnumerator WaitForDeathAnimation()
+{
+    // Espera até que a animação de morte termine
+    yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+    gameOverCanvas.SetActive(true);
+}
 }
