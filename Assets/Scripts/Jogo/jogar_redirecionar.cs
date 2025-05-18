@@ -3,7 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class jogar_redirecionar : MonoBehaviour
 {
-    public string level1;
     public void IniciaJogo()
     {
         var data = GameManager.instance.playerData;
@@ -11,6 +10,6 @@ public class jogar_redirecionar : MonoBehaviour
         data.life = 3; // Define a vida inicial
         data.keys = 0; // Define as moedas iniciais
         // Carrega a cena "Jogo"
-        SceneManager.LoadScene(level1);
+        SceneManager.LoadScene(2);
     }
 }
