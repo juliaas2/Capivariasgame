@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
     public GameObject gameOverCanvas;
     private AudioSource audioSource;
     public AudioClip keySound;
+    public AudioClip attackSound;
     public float Speed;
     private Rigidbody2D rb;
     public float JumpForce;
@@ -115,14 +116,14 @@ public class Player : MonoBehaviour
         }
     }
 
-    void Hit()
+void Hit()
+{
+    if (Input.GetKeyDown(KeyCode.Space))
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            animator.SetTrigger("hit");
-        }
-    
+        animator.SetTrigger("hit");
+        audioSource.PlayOneShot(attackSound);
     }
+}
 
     public void DisableAttackCollider()
     {
