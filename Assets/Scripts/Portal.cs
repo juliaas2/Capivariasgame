@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class Portal : MonoBehaviour
 {
-    public string cenaDestino; // nome da cena para carregar
+    public string cenaDestino;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
