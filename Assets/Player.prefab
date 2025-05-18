@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 6505471836904044676}
   - component: {fileID: 3436019212317405675}
   - component: {fileID: 6155028155155427918}
+  - component: {fileID: 7681075744401198853}
   - component: {fileID: 4963534452220228311}
   m_Layer: 0
   m_Name: Player
@@ -268,6 +269,21 @@ MonoBehaviour:
   key: 0
   life: 3
   attackCollider: {fileID: 7995012777014780587}
+  musicPlayer: {fileID: 0}
+--- !u!114 &7681075744401198853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7465501914985225229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f49a4b663c52f44de879db7b5221aff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerAnimator: {fileID: 4963534452220228311}
+  playerImage: {fileID: 0}
 --- !u!95 &4963534452220228311
 Animator:
   serializedVersion: 7
