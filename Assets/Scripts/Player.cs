@@ -149,7 +149,7 @@ public class Player : MonoBehaviour
         {
             
             musicPlayer.StopMusic();
-            gameOverCanvdas.SetActive(true);
+            gameOverCanvas.SetActive(true);
             Destroy(gameObject);
             // Lógica para o jogador morrer
         }
