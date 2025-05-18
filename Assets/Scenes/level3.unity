@@ -4712,6 +4712,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Ninja_preto '
       objectReference: {fileID: 0}
+    - target: {fileID: 6857284235776150387, guid: 68194f00e0a9f3f49b2a47572dfaa195, type: 3}
+      propertyPath: m_Radius
+      value: 1.9742882
+      objectReference: {fileID: 0}
+    - target: {fileID: 6857284235776150387, guid: 68194f00e0a9f3f49b2a47572dfaa195, type: 3}
+      propertyPath: m_Offset.x
+      value: 1.4742838
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
