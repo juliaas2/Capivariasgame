@@ -24,6 +24,8 @@ public class Player : MonoBehaviour
 
     public CircleCollider2D attackCollider;
 
+    public MusicPlayer musicPlayer;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -124,6 +126,7 @@ public class Player : MonoBehaviour
 
     public void AbleAttackCollider()
     {
+        Debug.Log("Ativando o collider de ataque");
         attackCollider.enabled = true;
     }
 
@@ -132,7 +135,7 @@ public class Player : MonoBehaviour
     if (other.CompareTag("Key"))
         {
             key++;
-            Destroy(other.gameObject, 0.5f); // Adicione um pequeno atraso para o som tocar antes de destruir
+            Destroy(other.gameObject,0.25f); // Adicione um pequeno atraso para o som tocar antes de destruir
             other.GetComponent<AudioSource>().Play();
         }
     }
@@ -140,12 +143,13 @@ public class Player : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        Debug.Log("Player tomou dano: " + damage);
+       Debug.Log("Player took damage: " + damage);
         life -= damage;
         if (life <= 0)
         {
-            Debug.Log("Player morreu");
-            gameOverCanvas.SetActive(true);
+            
+            musicPlayer.StopMusic();
+            gameOverCanvdas.SetActive(true);
             Destroy(gameObject);
             // Lógica para o jogador morrer
         }

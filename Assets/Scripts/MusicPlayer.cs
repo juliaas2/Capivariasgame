@@ -4,7 +4,7 @@ public class MusicPlayer : MonoBehaviour
 {
     private static MusicPlayer instance;
 
-    void Awake()
+    void Init()
     {
         if (instance == null)
         {
@@ -14,6 +14,15 @@ public class MusicPlayer : MonoBehaviour
         else
         {
             Destroy(gameObject);
+        }
+    }
+
+    public void StopMusic()
+    {
+        AudioSource audioSource = GetComponent<AudioSource>();
+        if (audioSource != null)
+        {
+            audioSource.Stop();
         }
     }
 }
