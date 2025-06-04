@@ -1,29 +1,39 @@
 using UnityEngine;
 
-
 public class Player : MonoBehaviour
-{   
+{
+    [Header("UI")]
     public GameObject gameOverCanvas;
+    public GameObject mobileControls;
+
+    [Header("Áudio")]
     private AudioSource audioSource;
     public AudioClip keySound;
     public AudioClip attackSound;
+
+    [Header("Movimentação")]
     public float Speed;
     private Rigidbody2D rb;
     public float JumpForce;
+    private Animator animator;
+    private BoxCollider2D colliderPlayer;
 
+    [Header("Estado do pulo")]
     public bool isJumping;
     public bool doubleJump;
 
-    public int key = 0;
+    [Header("Ataque")]
+    public CircleCollider2D attackCollider;
 
+    [Header("Coleta e Vida")]
+    public int key = 0;
     public int life = 8;
 
-    private Animator animator;
-
-    private BoxCollider2D colliderPlayer;
-
-
-    public CircleCollider2D attackCollider;
+    [Header("Controle Mobile")]
+    public bool moveLeft;
+    public bool moveRight;
+    public bool jumpPressed;
+    public bool attackPressed;
 
     public MusicPlayer musicPlayer;
 
@@ -35,11 +45,10 @@ public class Player : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
 
         var data = GameManager.instance.playerData;
-        life = data.life;  
+        life = data.life;
         key = data.keys;
-
     }
-    
+
     private void OnDisable()
     {
         var data = GameManager.instance.playerData;
@@ -52,20 +61,24 @@ public class Player : MonoBehaviour
         Move();
         Jump();
         Hit();
-        
     }
 
     void Move()
-    {  
-        Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0f , 0f);
+    {
+        float horizontal = 0f;
+
+        if (moveLeft) horizontal = -1f;
+        if (moveRight) horizontal = 1f;
+
+        Vector3 movement = new Vector3(horizontal, 0f, 0f);
         transform.position += movement * Time.deltaTime * Speed;
 
-        if (Input.GetAxis("Horizontal") > 0f)
+        if (horizontal > 0f)
         {
             animator.SetBool("walk", true);
             transform.eulerAngles = new Vector3(0f, 0f, 0f);
         }
-        else if (Input.GetAxis("Horizontal") < 0f)
+        else if (horizontal < 0f)
         {
             animator.SetBool("walk", true);
             transform.eulerAngles = new Vector3(0f, 180f, 0f);
@@ -77,26 +90,34 @@ public class Player : MonoBehaviour
     }
 
     void Jump()
-    {   
-        if (Input.GetKeyDown(KeyCode.W))
+    {
+        if (jumpPressed)
         {
+            jumpPressed = false;
+
             if (!isJumping)
             {
                 rb.AddForce(new Vector2(0f, JumpForce), ForceMode2D.Impulse);
                 isJumping = true;
                 animator.SetBool("jump", true);
             }
-            else
+            else if (!doubleJump)
             {
-                if (!doubleJump) 
-                {
-                    rb.AddForce(new Vector2(0f, JumpForce / 2f), ForceMode2D.Impulse);
-                    doubleJump = true;
-                }
+                rb.AddForce(new Vector2(0f, JumpForce / 2f), ForceMode2D.Impulse);
+                doubleJump = true;
             }
         }
     }
 
+    void Hit()
+    {
+        if (attackPressed)
+        {
+            attackPressed = false;
+            animator.SetTrigger("hit");
+            audioSource.PlayOneShot(attackSound);
+        }
+    }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -116,14 +137,15 @@ public class Player : MonoBehaviour
         }
     }
 
-void Hit()
-{
-    if (Input.GetKeyDown(KeyCode.Space))
+    void OnTriggerEnter2D(Collider2D other)
     {
-        animator.SetTrigger("hit");
-        audioSource.PlayOneShot(attackSound);
+        if (other.CompareTag("Key"))
+        {
+            key++;
+            Destroy(other.gameObject, 0.25f);
+            other.GetComponent<AudioSource>().Play();
+        }
     }
-}
 
     public void DisableAttackCollider()
     {
@@ -136,20 +158,9 @@ void Hit()
         attackCollider.enabled = true;
     }
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-    if (other.CompareTag("Key"))
-        {
-            key++;
-            Destroy(other.gameObject,0.25f); // Adicione um pequeno atraso para o som tocar antes de destruir
-            other.GetComponent<AudioSource>().Play();
-        }
-    }
-
-
     public void TakeDamage(int damage)
     {
-       Debug.Log("Player took damage: " + damage);
+        Debug.Log("Player took damage: " + damage);
         life -= damage;
         if (life <= 0)
         {
@@ -158,9 +169,20 @@ void Hit()
             rb.gravityScale = 0f;
             animator.Play("Player_die", -1);
             musicPlayer.StopMusic();
+            if (mobileControls != null)
+                mobileControls.SetActive(false);
             gameOverCanvas.SetActive(true);
             Destroy(gameObject);
-            // Lógica para o jogador morrer
         }
     }
+
+    // ==== CONTROLES MOBILE ====
+    public void OnLeftDown() => moveLeft = true;
+    public void OnLeftUp() => moveLeft = false;
+
+    public void OnRightDown() => moveRight = true;
+    public void OnRightUp() => moveRight = false;
+
+    public void OnJumpButton() => jumpPressed = true;
+    public void OnAttackButton() => attackPressed = true;
 }
