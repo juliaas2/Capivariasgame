@@ -2207,8 +2207,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -713.6, y: -273.8}
-  m_SizeDelta: {x: 164.4857, y: 104.0136}
+  m_AnchoredPosition: {x: -293.7, y: -136.6}
+  m_SizeDelta: {x: 31.5483, y: 50.5261}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &802811783
 MonoBehaviour:
@@ -2253,7 +2253,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 802811784}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1141095097}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: OnJumpButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &802811784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2421,8 +2433,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -808.7572, y: -381.9932}
-  m_SizeDelta: {x: 164.4857, y: 104.0136}
+  m_AnchoredPosition: {x: -332.4, y: -188.2}
+  m_SizeDelta: {x: 50.5261, y: 31.5483}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &886285684
 MonoBehaviour:
@@ -2518,7 +2530,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates: []
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1141095097}
+          m_TargetAssemblyTypeName: Player, Assembly-CSharp
+          m_MethodName: OnLeftDown
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1141095097}
+          m_TargetAssemblyTypeName: Player, Assembly-CSharp
+          m_MethodName: OnLeftUp
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &906296293
 GameObject:
   m_ObjectHideFlags: 0
@@ -2856,7 +2900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -3395,18 +3439,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1078469446}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.0027608627, w: -0.99999624}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1661350411}
   m_Father: {fileID: 978850407}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.316}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -619, y: -381.9932}
-  m_SizeDelta: {x: 164.4857, y: 104.0136}
+  m_AnchoredPosition: {x: -252.66, y: -188.2}
+  m_SizeDelta: {x: 50.5261, y: 31.5483}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1078469448
 MonoBehaviour:
@@ -3451,7 +3495,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1078469449}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1078469449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3502,7 +3558,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates: []
+  m_Delegates:
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1141095097}
+          m_TargetAssemblyTypeName: Player, Assembly-CSharp
+          m_MethodName: OnRightUp
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1141095097}
+          m_TargetAssemblyTypeName: Player, Assembly-CSharp
+          m_MethodName: OnRightDown
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &1138779587
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5173,8 +5261,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 752, y: -381.9932}
-  m_SizeDelta: {x: 164.4857, y: 104.0136}
+  m_AnchoredPosition: {x: 289.2387, y: -151.37}
+  m_SizeDelta: {x: 62.4295, y: 42.116}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1534001230
 MonoBehaviour:
@@ -5219,7 +5307,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1534001231}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1141095097}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: OnAttackButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1534001231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6725,6 +6825,10 @@ PrefabInstance:
       propertyPath: attackSound
       value: 
       objectReference: {fileID: 8300000, guid: c265d0ab75f294874a2036abbb6c66e1, type: 3}
+    - target: {fileID: 6155028155155427918, guid: e0eca03ef50628542a7d48eb8541bddf, type: 3}
+      propertyPath: jumpPressed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6155028155155427918, guid: e0eca03ef50628542a7d48eb8541bddf, type: 3}
       propertyPath: musicPlayer
       value: 
