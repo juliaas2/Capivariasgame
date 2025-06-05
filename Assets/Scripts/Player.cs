@@ -37,6 +37,14 @@ public class Player : MonoBehaviour
 
     public MusicPlayer musicPlayer;
 
+    private Vector3 initialPosition;
+
+    void Awake()
+    {
+        // Armazena a posição inicial assim que o objeto for criado
+        initialPosition = transform.position;
+    }
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -48,6 +56,7 @@ public class Player : MonoBehaviour
         life = data.life;
         key = data.keys;
     }
+
 
     private void OnDisable()
     {
@@ -174,8 +183,7 @@ public class Player : MonoBehaviour
             if (gameOverCanvas != null)
                 gameOverCanvas.SetActive(true);
 
-            // ❗ Importante: NÃO destruir o jogador
-            gameObject.SetActive(false);
+            gameObject.SetActive(false); // Não destruir o jogador
         }
     }
 
@@ -184,9 +192,8 @@ public class Player : MonoBehaviour
     // Método para botão de reviver
     public void ReviveFromButton()
     {
-        Vector3 defaultSpawnPosition = new Vector3(0f, 0f, 0f); // Altere para a posição desejada
         gameObject.SetActive(true); // Reativa o jogador
-        Revive(defaultSpawnPosition);
+        Revive(initialPosition);    // Usa a posição inicial salva
     }
 
     // Lógica de ressuscitar
@@ -209,7 +216,6 @@ public class Player : MonoBehaviour
             mobileControls.SetActive(true);
         if (gameOverCanvas != null)
             gameOverCanvas.SetActive(false);
-
     }
 
     // ==== CONTROLES MOBILE ====
