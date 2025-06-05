@@ -121,7 +121,7 @@ public class Player : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == 8) // Layer do chão
+        if (collision.gameObject.layer == 8)
         {
             isJumping = false;
             doubleJump = false;
@@ -171,9 +171,45 @@ public class Player : MonoBehaviour
             musicPlayer.StopMusic();
             if (mobileControls != null)
                 mobileControls.SetActive(false);
-            gameOverCanvas.SetActive(true);
-            Destroy(gameObject);
+            if (gameOverCanvas != null)
+                gameOverCanvas.SetActive(true);
+
+            // ❗ Importante: NÃO destruir o jogador
+            gameObject.SetActive(false);
         }
+    }
+
+    // ==== REVIVER ====
+
+    // Método para botão de reviver
+    public void ReviveFromButton()
+    {
+        Vector3 defaultSpawnPosition = new Vector3(0f, 0f, 0f); // Altere para a posição desejada
+        gameObject.SetActive(true); // Reativa o jogador
+        Revive(defaultSpawnPosition);
+    }
+
+    // Lógica de ressuscitar
+    public void Revive(Vector3 spawnPosition)
+    {
+        Debug.Log("Reviving player...");
+
+        transform.position = spawnPosition;
+        life = 2;
+
+        this.enabled = true;
+        colliderPlayer.enabled = true;
+        rb.gravityScale = 5f;
+
+        animator.Play("Player_idle", -1);
+        animator.SetBool("jump", false);
+        animator.SetBool("walk", false);
+
+        if (mobileControls != null)
+            mobileControls.SetActive(true);
+        if (gameOverCanvas != null)
+            gameOverCanvas.SetActive(false);
+
     }
 
     // ==== CONTROLES MOBILE ====

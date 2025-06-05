@@ -6696,6 +6696,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6803153453680558750, guid: f3cbd825197e642d396cd754838b44fc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1141095097}
+    - target: {fileID: 6803153453680558750, guid: f3cbd825197e642d396cd754838b44fc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReviveFromButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 6803153453680558750, guid: f3cbd825197e642d396cd754838b44fc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Player, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 8355561213543135668, guid: f3cbd825197e642d396cd754838b44fc, type: 3}
       propertyPath: m_Pivot.x
       value: 0
